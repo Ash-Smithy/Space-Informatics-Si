@@ -1,0 +1,14 @@
+#head {
+    color: rgba(245, 245, 245, 0.578);
+    text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+    background-color: #02090c;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 10px;
+    height: fit-content;
+}
+
+#note {
+    opacity: 0.8;
+}

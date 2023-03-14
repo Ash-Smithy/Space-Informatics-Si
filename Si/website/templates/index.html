@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <div class="everything">    
+    <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+           <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <img src="{{url_for('static', filename='images/Slideshow/1.jpg')}}" class="d-block w-100" alt="">
+               </div>
+               <div class="carousel-item">
+                 <img src="{{url_for('static', filename='images/Slideshow/2.jpg')}}" class="d-block w-100" alt="">
+               </div>
+               <div class="carousel-item">
+                 <img src="{{url_for('static', filename='images/Slideshow/3.jpg')}}" class="d-block w-100" alt="">
+               </div>
+               <div class="carousel-item">
+                 <img src="{{url_for('static', filename='images/Slideshow/4.jpg')}}" class="d-block w-100" alt="">
+               </div>
+               <div class="carousel-item">
+                 <img src="{{url_for('static', filename='images/Slideshow/5.jpg')}}" class="d-block w-100" alt="">
+               </div>
+               <div id="black" class="col--4 text-clr2">
+                 <h1 class="display-4">Space Informatics</h1>
+             </div>
+           </div>
+       </div>            
+         <!-- Body Content -->
+       <h2 class="head-1 p-4 m-0">The Cosmos</h2>
+       <div id="whole">
+             <div class="wrapper">
+                   <h2 class="short-heads" id="mercury">Mercury</h2>
+                     <p class="content card-body p-4">
+                       Mercury, the innermost planet of the solar system and the eighth in size and mass. Its closeness to the Sun and its smallness make it the most elusive of the planets visible to the unaided eye. Because its rising or setting is always within about two hours of the Sun’s, it is never observable when the sky is fully dark.
+                     </p>
+                   <h2 class="short-heads"><a name="Venus">Venus</a></h2>
+                     <p class="content card-body p-4">
+                       Venus is the second planet from the Sun. It is sometimes called Earth's "sister" or "twin" planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus (like Mercury) appears in Earth's sky never far from the Sun, either as morning star or evening star. Aside from the Sun and Moon, Venus is the brightest natural object in Earth's sky, capable of casting visible shadows on Earth at dark conditions and being visible to the naked eye in broad daylight
+                     </p>
+                   <h2 class="short-heads"><a name="Mars">Mars</a></h2>
+                     <p class="content card-body
+                      p-4">
+                       Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes and polar ice caps. It has two small and irregularly shaped moons, Phobos and Deimos.
+                     </p>
+                   <h2 class="short-heads" id="mercury">Mercury</h2>
+                     <p class="content card-body p-4" id="paras">
+                       Mercury, the innermost planet of the solar system and the eighth in size and mass. Its closeness to the Sun and its smallness make it the most elusive of the planets visible to the unaided eye. Because its rising or setting is always within about two hours of the Sun’s, it is never observable when the sky is fully dark.
+                     </p>
+             </div>
+       </div>
+   </div>
+  {% endblock %}
+  

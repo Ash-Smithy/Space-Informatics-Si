@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block header %}
+<title> Notes </title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/notes_style.css')}}">
+{% endblock %}
+
+{% block content%}
+<h2 id="head" align="center">Notes</h2>
+<div class="container">
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+      <button type="button" class="btn-close" onClick="deleteNote({{ note.id }})">
+      </button>
+      <span id="note">{{ note.data }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control" placeholder="Enter text here"></textarea>
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-outline-warning">Add Note</button>
+    </div>
+  </form>
+</div>
+  {% endblock %}
+  {% block javascript %}
+  <script type="text/javascript">
+    function deleteNote(noteId) {
+  fetch("/delete-note", {
+  method: "POST",
+  body: JSON.stringify({ noteId: noteId }),
+  }).then((_res) => {
+  window.location.href = "/notes";
+  });
+  }
+  </script>
+  {% endblock %}

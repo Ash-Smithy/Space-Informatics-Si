@@ -1,0 +1,241 @@
+
+/* For everything */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*#whole {
+    background-image: url(/Webpage/Images/Backgrounds/nexus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
+head title {
+    font-family: 'Comfortaa', cursive;
+}
+/*Scrollbar*/ 
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    margin : 0;
+    padding : 0;
+    width : 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #535353;
+    border-radius: 20px;
+  }
+
+
+
+body {
+    overflow: overlay;
+    background-color: black;
+}
+
+   /* OffCanvas */
+
+#offcanvas {
+    background-color: #000000f5;
+}
+
+#offcanvasLabel {
+    font-weight: 490;
+    font-family: 'Lobster', cursive;
+    color: rgb(0, 252, 218);
+}
+
+.offcanvas-body p {
+    background-color: rgba(0,0,0,0);
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.offcanvas-body .something {
+    padding: 18px;
+    font-family: 'Comfortaa', cursive;
+    color: rgba(240, 248, 255, 0.87);
+    width:19rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 80px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.205), 0 6px 20px 0 rgba(2, 255, 221, 0.607);
+}
+
+#smith {
+    display: inline;
+    border-radius: 60%;
+    opacity: 0.7;
+}
+.card a {
+    text-decoration: none;
+    color: rgb(52, 255, 241);
+}
+.card a:hover {
+    text-decoration: none;
+    color: rgb(255, 52, 52);
+}
+
+/* Navbar */
+nav {
+    padding: 0;
+    margin: 0;
+}
+.navbar {
+    transition: 0.5s;
+    background-color: rgb(0, 0, 0);
+}
+.navbar-scroll2 {
+    transition: all 0.7s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-brand img {
+    width: 40px; 
+    height: 40px;
+}
+
+
+.nav-item {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+}
+.nav-item .nav-link {
+    color: rgb(255, 255, 255);
+}
+.nav-item .nav-link:active {
+    color: cyan;
+}
+
+.nav-item .nav-link:hover {
+    color: cyan;
+}
+    
+.navbar-nav .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+#dropdown {
+    padding: 4px;
+    background-color: rgb(15, 15, 15);
+    border:none;
+}
+
+#dropdown:hover {
+    color: cyan;
+}
+
+#dropdown:visited {
+    color: cyan;
+}
+
+#dropdown:active {
+    color: cyan;
+}
+
+#dropdown .dropdown-item {
+    transition: all 0.3s;
+    color: cyan;
+}
+
+#dropdown .dropdown-item:hover {
+
+    transition: all 0.5s;
+    color: rgba(0, 0, 0, 0.766);
+    background-color: cyan;
+    border-radius: 5px;
+}
+
+
+#toggler-icon {
+    height: 20px;
+    width: 20px;
+    opacity: 70%;
+}
+
+/* Carousel */
+.carousel {
+    background-color: rgb(0, 0, 0);
+    overflow: overlay;
+    position: relative;
+}
+
+.carousel-item img {
+    opacity: 0.4;
+}
+
+.carousel-inner .text-clr2 {
+    font-family: 'Comfortaa', cursive;
+    opacity: 1;
+    text-align: center;
+    padding: 20%;
+    color:white;
+}
+
+/* Content */
+
+.head-1 {
+    color: rgba(245, 245, 245, 0.578);
+    text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+    background-color: #02090c;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 10px;
+    height: fit-content;
+}
+
+.everything {
+    background-color: black;
+}
+#whole {
+    background-image: linear-gradient(135deg,#764ba2 0%, #667eea 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper {
+    
+    padding: 5% 15%;
+}
+
+.content {
+    color: rgba(255, 255, 255, 0.805);
+    font-family: 'Antic', sans-serif;
+    background-color: rgba(207, 207, 207, 0.282);
+}
+
+.short-heads {
+    text-align: center;
+    color: rgb(225, 255, 0);
+    font-family: 'Lobster',cursive;
+}
+
+/*p {
+    color: rgba(168, 233, 233, 0.805);
+    background-color: rgba(60, 60, 60, 0.482);
+    font-family: 'Antic', sans-serif;
+    font-size: 28px;
+    border-style: none;
+    border-radius: 25px;
+}*/
+
+.footer {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(24, 0, 41);
+    height: 150px;
+}

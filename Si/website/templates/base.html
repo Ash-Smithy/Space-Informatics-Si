@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <link rel="icon" type="image/x-icon" href="/Images/Icons/launch.png">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/base_style.css')}}">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Great+Vibes&family=Josefin+Sans&family=K2D:wght@300&family=Lobster&family=Lobster+Two&family=Antic&family=Cairo:wght@200&display=swap');
+        </style>
+        {% block header %}
+         <title> Base </title>
+        {% endblock %}
+    </head>
+    <body>
+      
+          <!-- Nav bar -->
+          <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand p-2" href="/" style="font-size: 25px;color:white;font-family: 'Comfortaa', cursive;">
+                  <img src="{{url_for('static',filename='images/icons/launch.png')}}" alt="Logo" class="d-inline-block allign-text-top" >
+                    Si
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                  <img src="{{url_for('static',filename='images/icons/ham_icon.png')}}" alt="" id="toggler-icon">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"> 
+                      <a class="nav-link" href="/" aria-current="page">Earth</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/notes">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
+                        About
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item disabled" href="#"> {{ user.name }}</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                      </ul>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sign-up">Sign Up</a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </div>
+            </div>
+          </nav>
+        <!-- End of Navbar -->
+        <!-- offcanvas (About) -->
+         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="offcanvasLabel">The Creator</h2>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <center>
+              <div class="something card text-center">
+                <img src="{{url_for('static',filename='images/Ash_Smith.jpeg')}}" class="card-img-top" id="Smith" alt="Ash-Smithy">
+                <div class="card-body">
+                  This page was designed and created by Ash Smith <br> It was created using HTML, CSS, JavaScript and Boostrap
+                </div>
+              </div>
+              <br>
+              <div class="something card text-center">
+                Links:
+                <a href="https://github.com/Ash-Smithy">GitHub</a>
+              </div>
+            </center>
+            </div>
+          </div> 
+          <!-- End of offcanvas (About) -->
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="alert alert-danger alert-dismissable fade show" role="alert">
+              
+              {{ message }}
+              <button type="button" class="btn-close" data-dismiss="alert">
+              </button>
+            </div>
+            {% else %}
+            <div class="alert alert-success alert-dismissable fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-dismiss="alert" style="position: right;">
+              </button>
+            </div>
+            {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% endwith %}
+          {% block content %} 
+          {% endblock %}  
+          <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='js/index_java.js')}}"> </script>
+      
+        {% block javascript %}
+        {% endblock %}
+    </body>
+</html>
