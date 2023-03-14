@@ -5,27 +5,34 @@
  {% endblock %}
 {% block content %} 
 <div class="container">
+    <h1 id="Si">Space Informatics</h1>
 <form method="POST">
-    <h3 style="text-align: center">Sign up</h3>
-    <div class="form-group">
-        <label for="email">Email: </label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+    <h1 style="text-align: center">Sign up</h1>
+    <div class="row">
+        <div class="form-group col">
+            <label for="name">Name: </label>
+            <input id="txt" type="text" class="form-control" id="Name" name="Name" placeholder="Enter your Name">
+        </div>
+        <div class="form-group col">
+            <label for="email">Email: </label>
+            <input id="txt" type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+        </div>
     </div>
-    <div class="form-group">
-        <label for="name">Name: </label>
-        <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your Name">
-    </div>
-    <div class="form-group">
-        <label for="password1">Password: </label>
-        <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password">
-    </div>
-    <div class="form-group">
-        <label for="password">Confirm Password: </label>
-        <input type="password" class="form-control" id="password2" name="password2" placeholder="Enter password again">
+    <div class="row">
+        <div class="form-group col">
+            <label for="password1">Password: </label>
+            <input id="txt" type="password" class="form-control" id="password1" name="password1" placeholder="Enter password">
+        </div>
+        <div class="form-group col">
+            <label for="password">Confirm Password: </label>
+            <input id="txt" type="password" class="form-control" id="password2" name="password2" placeholder="Enter password again">
+        </div>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Sign up</button>
-</form>
+    <div style="text-align: center;" class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-outline-primary">Sign up</button>
+    </div>
+    </form>
 <br>
 <p class="acc">Already have an account? <a href="/login">Login</a></p>
 </div>

@@ -72,7 +72,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.205), 0 6px 20px 0 rgba(2, 255, 221, 0.607);
 }
 
-#smith {
+#Smith {
     display: inline;
     border-radius: 60%;
     opacity: 0.7;
@@ -121,44 +121,31 @@ nav {
     color: cyan;
 }
     
-.navbar-nav .navbar-center {
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
-}
+
 
 
 #dropdown {
-    padding: 4px;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(2, 2, 2);
     border:none;
 }
 
-#dropdown:hover {
-    color: cyan;
-}
-
-#dropdown:visited {
-    color: cyan;
-}
 
 #dropdown:active {
     color: cyan;
 }
 
 #dropdown .dropdown-item {
+    color: #FEE715FF;
     transition: all 0.3s;
-    color: cyan;
 }
 
 #dropdown .dropdown-item:hover {
-
+    
     transition: all 0.5s;
-    color: rgba(0, 0, 0, 0.766);
-    background-color: cyan;
-    border-radius: 5px;
+    color: #101820FF;
+    background-color: #FEE715FF;
+    border-radius: 3px;
 }
-
 
 #toggler-icon {
     height: 20px;

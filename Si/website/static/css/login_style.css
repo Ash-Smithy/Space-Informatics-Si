@@ -1,13 +1,27 @@
-h3 {
+#Si {
+    padding: 15px;
     color: white;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
 }
+h1 {
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
 label 
 {
     font-size: 18px;
+    font-family: 'Antic', sans-serif;
+    letter-spacing: 0.7px;
     padding: 8px 0px;
     color: white;
 }
 
 .acc {
     color: #fff;
+}
+
+#txt {
+    opacity: 0.7;
 }
