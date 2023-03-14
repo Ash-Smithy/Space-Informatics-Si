@@ -1,0 +1,36 @@
+
+#welcome {
+    padding: 50px;
+    text-align: center;
+}
+#Si {
+    font-size: 50px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+h1 {
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+h2 {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    color: white
+}
+#or {
+    color: white;
+    padding: 30px;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#sgn:hover {
+    background-color: rgba(123, 189, 255, 0.356);
+}
+
+#lgn:hover {
+    background-color: rgba(252, 101, 101, 0.274);
+}

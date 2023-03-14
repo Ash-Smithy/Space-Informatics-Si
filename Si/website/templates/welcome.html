@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block header %}
+ <title> Welcome </title> 
+ <link rel="stylesheet" href="{{url_for('static',filename='css/welcome_style.css')}}">
+ {% endblock %}
+{% block content %} 
+<div class="container">
+    <h1 id="welcome">Welcome to <br> <span id="Si">Space Informatics</span></h1>
+    <h2> Please </h2> <br>
+    <form method="POST">
+        <div class="row">
+            <div style="text-align: center;">
+                <a href="/login" id="lgn" class="btn btn-outline-danger btn-lg btn-block link-danger"> Login </a>
+            </div>
+            <br>
+            <h3 style="text-align: center; font-family: 'Cairo', sans-serif;" id="or"> OR </h3>
+            <br>
+            <div style="text-align: center;">
+                <a href="/sign-up"  id="sgn" class="btn btn-outline-primary btn-lg btn-block link-primary"> Sign up </a>
+            </div>
+        </div>
+        <br>
+        <h2 style="text-align: center; font-family: 'Cairo', sans-serif;"> to continue </h2>
+    </form>
+    <br>
+</div>
+{% endblock %}

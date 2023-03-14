@@ -10,5 +10,16 @@
 }
 
 #note {
+    color: grey;
+    opacity: 1;
+}
+
+#noted {
+    border-radius: 7px;
     opacity: 0.8;
+    color: black;
+}
+
+li {
+    margin: 8px;
 }

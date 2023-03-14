@@ -9,10 +9,10 @@
 <div class="container">
   <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
-    <li class="list-group-item">
+    <li class="list-group-item" id="noted">
       <button type="button" class="btn-close" onClick="deleteNote({{ note.id }})">
-      </button>
-      <span id="note">{{ note.data }}</span>
+      </button> &emsp;
+        Note {{ note.id }} : {{ note.data }}
     </li>
     {% endfor %}
   </ul>
