@@ -48,3 +48,7 @@ def delete_note():
             db.session.commit()
 
     return jsonify({})
+
+@views.route('/bot',methods = ['GET','POST'])
+def bot():
+    return render_template("cbot.html",user = current_user)

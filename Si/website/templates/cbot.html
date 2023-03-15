@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block header %}
+ <title> Welcome </title> 
+ <link rel="stylesheet" href="{{url_for('static',filename='css/cbot_style.css')}}">
+ {% endblock %}
+{% block content %} 
+<div class="container">
+    <h1 id="welcome"> Chatbot Page </h1>
+</div>
+{% endblock %}
