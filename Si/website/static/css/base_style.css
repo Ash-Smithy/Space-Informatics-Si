@@ -39,6 +39,7 @@ head title {
 
 
 body {
+    background-repeat: none;
     overflow: overlay;
     background-color: black;
 }

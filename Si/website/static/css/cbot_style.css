@@ -1,4 +1,72 @@
-h1 {
+body {
+    background-image: linear-gradient(to right,#2193b0,#6dd5ed);
+ }
+ h1 {
+    color: rgba(245, 245, 245, 0.578);
+    text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+    background-color: #02090c;
+    font-family: 'Cairo', sans-serif;
     text-align: center;
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+  #chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+  }
+  #userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+  }
+  #textInput {
+    width: 90%;
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 17px;
+  }
+  .userText {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+  }
+  .userText span {
     color: white;
-}
+    padding: 10px;
+    border-radius: 2px;
+  }
+  .botText {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+  }
+  .botText span {
+    padding: 10px;
+    border-radius: 2px;
+  }
+  #tidbit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+  }
+  .boxed {
+    background-color:black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+    margin-top: 60px;
+    border: 4px solid rgb(0, 98, 128);
+    border-radius: 20px;
+  }
+  
+  .box {
+    border: 2px solid black;
+  }

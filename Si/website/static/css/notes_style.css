@@ -1,3 +1,6 @@
+body {
+    background-image: linear-gradient(to left, #6e45e2 0%, #88d3ce 100%);
+}
 #head {
     color: rgba(245, 245, 245, 0.578);
     text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
@@ -12,14 +15,12 @@
 #note {
     color: grey;
     opacity: 1;
+    margin: 5px 0px;
 }
 
 #noted {
     border-radius: 7px;
     opacity: 0.8;
     color: black;
-}
-
-li {
-    margin: 8px;
+    margin: 5px;
 }
