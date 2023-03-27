@@ -190,7 +190,7 @@ nav {
     background-color: black;
 }
 #whole {
-    background-image: linear-gradient(135deg,#764ba2 0%, #667eea 100%);
+    background-image: linear-gradient(135deg,#603d81 0%, #3e4d94 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -210,6 +210,9 @@ nav {
     text-align: center;
     color: rgb(225, 255, 0);
     font-family: 'Lobster',cursive;
+}
+.alert {
+    margin: 5px;
 }
 
 /*p {

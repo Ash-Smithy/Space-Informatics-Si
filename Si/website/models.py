@@ -15,3 +15,16 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     name = db.Column(db.String(150))
     notes = db.relationship('Note')
+    user_data = db.relationship('Conversations')
+    bot_data = db.relationship('Bot')
+
+class Conversations(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    user_inp = db.Column(db.String(200))
+    u_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+class Bot(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    user_input = db.Column(db.String(200), db.ForeignKey('conversations.user_inp'))
+    bot_res = db.Column(db.String(200))
+    u_id = db.Column(db.Integer, db.ForeignKey('user.id'))

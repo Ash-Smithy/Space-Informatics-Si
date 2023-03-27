@@ -10,11 +10,11 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('Si/website/bot_intents.json').read())
 words = []
 classes = []
 documents = []
-ignore_letters = []
+ignore_letters = ['?','!','.',',']
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:

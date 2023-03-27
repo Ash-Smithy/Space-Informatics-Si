@@ -1,5 +1,8 @@
-
+body {
+    background-image: linear-gradient(to right,#0f0c29,#302b63,#24243e);
+}
 #Si {
+    margin: 30px;
     text-align: center;
     font-size: 50px;
     color: white;

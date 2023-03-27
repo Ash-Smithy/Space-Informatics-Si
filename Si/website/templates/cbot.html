@@ -1,49 +1,35 @@
 {% extends "base.html" %}
 {% block header %}
- <title> Welcome </title> 
+ <title> Bot </title> 
  <link rel="stylesheet" href="{{url_for('static',filename='css/cbot_style.css')}}">
  {% endblock %}
 {% block content %} 
 <center>
     <h1>
-      Le Bot
+       Le Bot
     </h1>
-  </center>
-  <div class="boxed">
-    <div>
-      <div id="chatbox">
-        <p class="botText">
-          <span>Hi! I'm ChatBot</span>
-        </p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Enter message.." />
-      </div>
+</center>
+    <div class="container">
+        <div class="box">
+            {% for input in user.user_data %}
+            <div class="User" id="userMsg">
+                <p>Me: {{ input.user_inp }} </p>
+            </div>
+            {% endfor %}
+            {% for res in user.bot_data %}
+            <div class="Bot" id="botMsg">
+              <p>Bot: {{ res.bot_res }} </p>  
+            </div>
+            {% endfor %}
+            <form method="POST" action='/bot'>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Send Message.." id="userInp" name="userInp" onfocus=this.value=''>
+                    <input type="Submit" value="Send" class="btn btn-danger" id="send">
+                </div>
+            </form>
+        </div>
     </div>
-    {% endblock %}
+{% endblock %}
 {% block javascript %}
-    <script>
-      function getBotResponse() {
-        var rawText = $("#textInput").val();
-        var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
-        $("#textInput").val("");
-        $("#chatbox").append(userHtml);
-        document
-          .getElementById("userInput")
-          .scrollIntoView({ block: "start", behavior: "smooth" });
-        $.get("/get", { msg: rawText }).done(function(data) {
-          var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-          $("#chatbox").append(botHtml);
-          document
-            .getElementById("userInput")
-            .scrollIntoView({ block: "start", behavior: "smooth" });
-        });
-      }
-      $("#textInput").keypress(function(e) {
-        if (e.which == 13) {
-          getBotResponse();
-        }
-      });
-    </script>
-  </div>
+<script type="text/javascript" src="{{url_for('static',filename='js/bot_java.js')}}"></script>
 {% endblock %}
