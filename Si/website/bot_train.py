@@ -8,6 +8,7 @@ from tensorflow import keras
 import nltk
 from nltk.stem import WordNetLemmatizer
 
+# to reduce a word to its stem/base form
 lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('Si/website/bot_intents.json').read())
@@ -18,7 +19,7 @@ ignore_letters = ['?','!','.',',']
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
-        word_list = nltk.word_tokenize(pattern)
+        word_list = nltk.word_tokenize(pattern) #tokenize is used to break down the words
         words.extend(word_list)
         documents.append((word_list, intent['tag']))
         if intent['tag'] not in classes:
@@ -56,8 +57,9 @@ train_y = list(training[:,1])
 model = keras.models.Sequential()
 model.add(keras.layers.Dense(128, input_shape=(len(train_x[0]),),activation='relu'))
 model.add(keras.layers.Dropout(0.5))
+model.add(keras.layers.Dense(64, activation='relu'))
+model.add(keras.layers.Dropout(0.5))
 model.add(keras.layers.Dense(len(train_y[0]), activation='softmax'))
-
 sgd = keras.optimizers.SGD(learning_rate=0.01, weight_decay= 1e-6, momentum=0.9, nesterov=True)
 model.compile(loss= 'categorical_crossentropy', optimizer=sgd, metrics= ['accuracy'])
 
