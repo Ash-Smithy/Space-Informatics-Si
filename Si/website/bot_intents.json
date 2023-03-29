@@ -8,15 +8,19 @@
          "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
         },
         {"tag": "age",
-         "patterns": ["how old", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 18 years old!", ""]
+         "patterns": ["how old", "what is your age", "how old are you", "age"],
+         "responses": ["I am 18 years old!"]
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?","who are you?"],
-         "responses": ["I'm me, who are you?", "I'm da Bot", "I'm the best bot ever!"]
+         "patterns": ["who are you","what do you do","what can you do"],
+         "responses": ["I'm Si, a pleasure to meet you!","I'm Si! An intelligent chatbot", "I'm the best bot ever!"]
+        },
+        {"tag": "tensorflow",
+         "patterns": ["Tell me about tensorflow", "tensorflow", "what is tensorflow"],
+         "responses": ["TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.", "TensorFlow is a software library that is free and open-source, designed for machine learning and artificial intelligence applications. While it can be applied to various tasks, its main emphasis is on training and inference of deep neural networks."]
         },
         {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
+         "patterns": ["Id like to buy something", "whats on the menu", "what do you recommend", "could I get something to eat"],
          "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"]
         },
         {"tag": "hours",
@@ -25,3 +29,4 @@
         }
    ]
 }
+

@@ -16,3 +16,19 @@ body {
     border: 2px solid black;
     padding: 15px;
   }
+
+  #botMsg {
+    margin: 4px 0px;
+    border-radius: 10px;
+    background-color: aliceblue;
+  }
+
+  #userMsg {
+    margin: 4px 0px;
+    border-radius: 10px;
+    background-color: bisque;
+  }
+
+  #text {
+    padding: 5px;
+  }

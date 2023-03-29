@@ -11,15 +11,18 @@
 </center>
     <div class="container">
         <div class="box">
-            {% for input in user.user_data %}
-            <div class="User" id="userMsg">
-                <p>Me: {{ input.user_inp }} </p>
-            </div>
-            {% endfor %}
-            {% for res in user.bot_data %}
             <div class="Bot" id="botMsg">
-              <p>Bot: {{ res.bot_res }} </p>  
+                <p id="text">Bot: Hi! I'm the Si bot! How can I help you? </p>  
             </div>
+            {% for input in user.bot_data %}
+                {% if input.u_id == user.id %}
+                <div class="User" id="userMsg">
+                    <p id="text">{{ user.name }}: {{ input.user_input }} </p>
+                </div>
+                    <div class="Bot" id="botMsg">
+                            <p id="text"> Bot: {{ input.bot_res }} </p>  
+                    </div>
+                {% endif %}
             {% endfor %}
             <form method="POST" action='/bot'>
                 <div class="input-group mb-3">

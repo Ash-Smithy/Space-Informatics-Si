@@ -10,21 +10,25 @@ class Note(db.Model):
 
 
 class User(db.Model, UserMixin):
+    __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(150), unique = True)
     password = db.Column(db.String(150))
     name = db.Column(db.String(150))
     notes = db.relationship('Note')
-    user_data = db.relationship('Conversations')
-    bot_data = db.relationship('Bot')
+    user_data = db.relationship('Conversations', backref='user')
+    bot_data = db.relationship('Bot', backref='user')
+ 
 
 class Conversations(db.Model):
+    __tablename__ = 'conversations'
     id = db.Column(db.Integer,primary_key=True)
     user_inp = db.Column(db.String(200))
     u_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class Bot(db.Model):
+    __tablename__ = 'bot'
     id = db.Column(db.Integer,primary_key=True)
     user_input = db.Column(db.String(200), db.ForeignKey('conversations.user_inp'))
-    bot_res = db.Column(db.String(200))
+    bot_res = db.Column(db.String(200))    
     u_id = db.Column(db.Integer, db.ForeignKey('user.id'))
