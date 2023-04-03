@@ -32,3 +32,12 @@ body {
   #text {
     padding: 5px;
   }
+
+  .cosmos {
+    color: #02090c;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 10px;
+    height: fit-content;
+}

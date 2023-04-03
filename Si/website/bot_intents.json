@@ -7,6 +7,10 @@
          "patterns": ["how are you", "how about you", "you"],
          "responses": ["I am doing good, hope it is the same with you", "I doing great! Thank you."]
         },
+        {"tag": "thank",
+         "patterns": ["thank you", "thanks", "thanq", "tq"],
+         "responses": ["You're welcome :D!", "Happy to assist!", "Not a problem", "No Worries!"]
+        },
         {"tag": "response",
          "patterns": ["fine", "good", "gud", "doing good", "doing well"],
          "responses": ["Glad to hear that!", "Happy to hear from you!","Glad to know!"]

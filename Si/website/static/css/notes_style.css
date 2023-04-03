@@ -12,6 +12,14 @@ body {
     height: fit-content;
 }
 
+.cosmos {
+    color: rgba(245, 245, 245, 0.578);
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 10px;
+    height: fit-content;
+}
 #note {
     color: grey;
     opacity: 1;
