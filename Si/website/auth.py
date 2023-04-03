@@ -5,10 +5,10 @@ from . import db
 from flask_login import login_user, login_required, logout_user, current_user
 
 
-
+#register this file as a blueprint
 auth = Blueprint('auth',__name__)
 
-
+#to login on login page
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -27,14 +27,14 @@ def login():
             flash('Email does not exist.', category='error')
     return render_template("login.html", user= current_user)
 
-
+#to logout
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('views.welcome'))
 
-
+#to sign up on sign-up page
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':

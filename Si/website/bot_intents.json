@@ -1,31 +1,83 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "patterns": ["Hi", "Is anyone there", "Hello", "Good day", "Whats up"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"]
+        },
+        {"tag": "check",
+         "patterns": ["how are you", "how about you", "you"],
+         "responses": ["I am doing good, hope it is the same with you", "I doing great! Thank you."]
+        },
+        {"tag": "response",
+         "patterns": ["fine", "good", "gud", "doing good", "doing well"],
+         "responses": ["Glad to hear that!", "Happy to hear from you!","Glad to know!"]
+        },
+        {"tag": "response2",
+         "patterns": ["not doing well","bad","not so well","i am sick"],
+         "responses": ["Hope you get better soon!", "Take your meds and go early to bed, you'll be fine in no time. Get well soon!"]
         },
         {"tag": "goodbye",
          "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+         "responses": ["Sad to see you go..", "Talk to you later!", "Goodbye!", "Bye Bye!"]
         },
         {"tag": "age",
          "patterns": ["how old", "what is your age", "how old are you", "age"],
-         "responses": ["I am 18 years old!"]
+         "responses": ["I do not age, but I believe I am a few months old", "My creator had me in mind before I was born, but I have been in this world for around a few months."]
         },
         {"tag": "name",
          "patterns": ["who are you","what do you do","what can you do"],
-         "responses": ["I'm Si, a pleasure to meet you!","I'm Si! An intelligent chatbot", "I'm the best bot ever!"]
+         "responses": ["I'm Si, a pleasure to meet you!","I'm Si! An intelligent chatbot", "I'm Si the best bot ever!"]
+        },
+        {"tag": "about",
+         "patterns": ["what can you do"],
+         "responses": ["I'm An intelligent chatbot", "I try to understand what you say."]
         },
         {"tag": "tensorflow",
          "patterns": ["Tell me about tensorflow", "tensorflow", "what is tensorflow"],
          "responses": ["TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.", "TensorFlow is a software library that is free and open-source, designed for machine learning and artificial intelligence applications. While it can be applied to various tasks, its main emphasis is on training and inference of deep neural networks."]
         },
         {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you recommend", "could I get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"]
+         "patterns": ["on the menu", "what do you have", "i am hungry"],
+         "responses": ["We have delicious bakery items to offer! It includes pastries, cookies, cupcakes, biscuits and more!",""]
         },
         {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"]
+         "patterns": ["what are your hours", "hours of operation", "working hours"],
+         "responses": ["Everyday all day!","I work 24/7"]
+        },
+        {"tag": "mercury",
+         "patterns": ["mercury", "tell about mercury", "what is mercury"],
+         "responses": ["Mercury is the smallest planet in our solar system – only slightly larger than Earth's Moon.","Mercury is one of the rocky planets. It has a solid surface that is covered with craters like our Moon. It has a thin atmosphere, and it doesn’t have any moons."]
+        },
+        {"tag": "venus",
+         "patterns": ["venus", "tell about venus", "what is venus"],
+         "responses": ["Venus is the second closest planet to the Sun, orbiting at a distance of about 67 million miles (108 million kilometers)","Venus is the hottest planet in our solar system. Its thick atmosphere is full of the greenhouse gas carbon dioxide, and it has clouds of sulfuric acid."]
+        },
+        {"tag": "earth",
+         "patterns": ["earth", "tell about earth", "what is earth"],
+         "responses": ["Earth orbits our Sun, a star. Earth is the third planet from the Sun at a distance of about 93 million miles (150 million km).","Our home planet Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70% of Earth's surface."]
+        },
+        {"tag": "mars",
+         "patterns": ["mars", "tell about mars", "what is mars"],
+         "responses": ["Mars orbits our Sun, a star. Mars is the fourth planet from the Sun at an average distance of about 228 million km (142 million miles)","Mars is a cold desert world. It is half the size of Earth. Mars is sometimes called the Red Planet. It's red because of rusty iron in the ground."]
+        },
+        {"tag": "jupiter",
+         "patterns": ["jupiter", "tell about jupiter", "what is jupiter"],
+         "responses": ["Jupiter orbits about 484 million miles (778 million kilometers)","Jupiter is the biggest planet in our solar system. It's similar to a star, but it never got big enough to start burning."]
+        },
+        {"tag": "saturn",
+         "patterns": ["saturn", "tell about saturn", "what is saturn"],
+         "responses": ["Saturn is a collosal planet, nine Earths side by side would almost span Saturn’s diameter. That does not include Saturn’s rings.","The rings we see are made of groups of tiny ringlets that surround Saturn. They’re made of chunks of ice and rock."]
+        },
+        {"tag": "uranus",
+         "patterns": ["uranus", "tell about uranus", "what is uranus"],
+         "responses": ["Uranus is about four times wider than Earth, it orbits our Sun, a star, and is the seventh planet from the Sun at a distance of about 1.8 billion miles (2.9 billion kilometers).", "Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue."]
+        },
+        {"tag": "neptune",
+         "patterns": ["neptune", "tell about neptune", "what is neptune"],
+         "responses": ["Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations.", "Neptune is about four times wider than Earth, it orbits our Sun, a star, and is the eighth planet from the Sun at a distance of about 2.8 billion miles (4.5 billion kilometers)"]
+        },
+        {"tag": "pluto",
+         "patterns": ["pluto", "tell about pluto", "what is pluto"],
+         "responses": ["Pluto is a complex world of ice mountains and frozen plains. Once considered the ninth planet, Pluto is the best known of a new class of worlds called dwarf planets.", "Pluto orbits the Sun about 3.6 billion miles (5.8 billion km) away on average, about 40 times as far as Earth, in a region called the Kuiper Belt."]
         }
    ]
 }

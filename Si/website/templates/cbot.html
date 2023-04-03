@@ -1,26 +1,26 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!--Jinja to extend base template-->
 {% block header %}
  <title> Bot </title> 
  <link rel="stylesheet" href="{{url_for('static',filename='css/cbot_style.css')}}">
  {% endblock %}
-{% block content %} 
+{% block content %}  <!--Jinja body overwritten -->
 <center>
     <h1>
        Le Bot
     </h1>
 </center>
     <div class="container">
-        <div class="box">
+        <div class="box" onload="scrollToBottom()">
             <div class="Bot" id="botMsg">
                 <p id="text">Bot: Hi! I'm the Si bot! How can I help you? </p>  
             </div>
-            {% for input in user.bot_data %}
+            {% for input in user.bot_data %} <!--Jinja to access "user" variable -->
                 {% if input.u_id == user.id %}
                 <div class="User" id="userMsg">
                     <p id="text">{{ user.name }}: {{ input.user_input }} </p>
                 </div>
                     <div class="Bot" id="botMsg">
-                            <p id="text"> Bot: {{ input.bot_res }} </p>  
+                            <p id="text"> Si: {{ input.bot_res }} </p>  
                     </div>
                 {% endif %}
             {% endfor %}

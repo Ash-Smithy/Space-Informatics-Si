@@ -1,16 +1,9 @@
-
 /* For everything */
 
 * {
     margin: 0;
     padding: 0;
 }
-/*#whole {
-    background-image: url(/Webpage/Images/Backgrounds/nexus.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} */
 
 head title {
     font-family: 'Comfortaa', cursive;
@@ -212,17 +205,8 @@ nav {
     font-family: 'Lobster',cursive;
 }
 .alert {
-    margin: 5px;
+    margin: 3px;
 }
-
-/*p {
-    color: rgba(168, 233, 233, 0.805);
-    background-color: rgba(60, 60, 60, 0.482);
-    font-family: 'Antic', sans-serif;
-    font-size: 28px;
-    border-style: none;
-    border-radius: 25px;
-}*/
 
 .footer {
     align-items: center;

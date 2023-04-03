@@ -20,13 +20,13 @@ body {
   #botMsg {
     margin: 4px 0px;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: rgb(221, 221, 221);
   }
 
   #userMsg {
     margin: 4px 0px;
     border-radius: 10px;
-    background-color: bisque;
+    background-color: ghostwhite;
   }
 
   #text {

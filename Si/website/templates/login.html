@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!--Jinja to extend base template-->
 {% block header %}
  <title> Login </title> 
  <link rel="stylesheet" href="{{url_for('static',filename='css/login_style.css')}}">
  {% endblock %}
-{% block content %} 
+{% block content %}  <!--Jinja body overwritten -->
 <div class="container">
     <h1 id="Si">Space Informatics</h1>
     <form method="POST">

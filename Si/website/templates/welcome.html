@@ -1,9 +1,9 @@
-{% extends "base.html" %}
-{% block header %}
+{% extends "base.html" %}  <!--Jinja to extend base template-->
+{% block header %} <!--Jinja header overwritten -->
  <title> Welcome </title> 
  <link rel="stylesheet" href="{{url_for('static',filename='css/welcome_style.css')}}">
  {% endblock %}
-{% block content %} 
+{% block content %}  <!--Jinja body overwritten -->
 <div class="container">
     <h1 id="welcome">Welcome to <br> <span id="Si">Space Informatics</span></h1>
     <h2> Please </h2> <br>

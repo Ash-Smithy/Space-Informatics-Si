@@ -1,13 +1,15 @@
-from flask import Blueprint,render_template, request, flash, json ,jsonify
+#modules to import
+from flask import Blueprint,render_template, request, flash
 from flask_login import current_user
 from . import db
 from .models import Conversations, Bot
 from .bot_run import result
 
+#to register this file as a blueprint
 bot_bp = Blueprint('bot',__name__)
 
 
-
+#to access bot page and have conversations with the chatbot
 @bot_bp.route('/bot',methods=['GET', 'POST'])
 def bot():
     if request.method == 'POST':

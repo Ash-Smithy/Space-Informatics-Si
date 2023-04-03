@@ -1,10 +1,10 @@
-{% extends "base.html" %} 
+{% extends "base.html" %} <!--Jinja to extend base template-->
 
 {% block header %}
 <title> Si Home </title>
 {% endblock %}
 
-{% block content%}
+{% block content%}  <!--Jinja body overwritten -->
   <div class="everything">    
     <div id="carousel" class="carousel slide carousel-fade" data-interval="5000" data-bs-ride="carousel">
            <div class="carousel-inner">
@@ -32,6 +32,10 @@
        <h2 class="head-1 p-4 m-0">The Cosmos</h2>
        <div id="whole">
              <div class="wrapper">
+                  <h2 class="short-heads" id="mercury">Space Informatics</h2>
+                  <p class="content card-body p-4" style="text-align: center;">
+                    Space Informatics is a webpage designed for your personal use. This is an idea under development. <br> So far we have added a cool <a class="link-warning" href="/bot">Chatbot!</a> Go check it out
+                  </p>
                    <h2 class="short-heads" id="mercury">Mercury</h2>
                      <p class="content card-body p-4">
                        Mercury, the innermost planet of the solar system and the eighth in size and mass. Its closeness to the Sun and its smallness make it the most elusive of the planets visible to the unaided eye. Because its rising or setting is always within about two hours of the Sun’s, it is never observable when the sky is fully dark.
@@ -44,10 +48,6 @@
                      <p class="content card-body
                       p-4">
                        Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes and polar ice caps. It has two small and irregularly shaped moons, Phobos and Deimos.
-                     </p>
-                   <h2 class="short-heads" id="mercury">Mercury</h2>
-                     <p class="content card-body p-4" id="paras">
-                       Mercury, the innermost planet of the solar system and the eighth in size and mass. Its closeness to the Sun and its smallness make it the most elusive of the planets visible to the unaided eye. Because its rising or setting is always within about two hours of the Sun’s, it is never observable when the sky is fully dark.
                      </p>
              </div>
        </div>

@@ -53,6 +53,7 @@ def get_response(intents_list, intents_json):
     return result
 
 def result(val):
+    val = val.lower()
     while True:
         ints = predict_class(val)
         res = get_response(ints, intents)

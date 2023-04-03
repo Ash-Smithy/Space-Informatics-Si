@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!--Jinja to extend base template-->
 {% block header %}
 <title> Notes </title>
 <link rel="stylesheet" href="{{url_for('static',filename='css/notes_style.css')}}">
 {% endblock %}
 
-{% block content%}
+{% block content%} <!--Jinja body overwritten -->
 <h2 id="head" align="center">Notes</h2>
 <div class="container">
   <ul class="list-group list-group-flush" id="notes">
@@ -13,7 +13,7 @@
       <h6> 
         <button type="button" class="btn-close" onClick="deleteNote({{ note.id }})">
         </button> &emsp;
-        Note {{ note.id }} [{{note.date}}] 
+        Note {{ note.id }} [{{note.date}}] <!--Jinja to access "user" variable -->
       </h6>{{ note.data }}
     </li>
     {% endfor %}
@@ -27,7 +27,7 @@
   </form>
 </div>
   {% endblock %}
-  {% block javascript %}
+  {% block javascript %} <!--Jinja JavaScript overwritten -->
   <script type="text/javascript">
     function deleteNote(noteId) {
   fetch("/delete-note", {
