@@ -6,6 +6,7 @@ from tensorflow import keras
 
 
 import nltk
+nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 
 # to reduce a word to its stem/base form

@@ -55,7 +55,7 @@ def sign_up():
         elif len(password1) < 6:
             flash('Password must be atleast 5 characters', category='error')
         else:
-            new_user = User(email=email,name=name,password=generate_password_hash(password1,method='sha256'))
+            new_user = User(email=email,name=name,password=generate_password_hash(password1,method='pbkdf2:sha256'))
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
